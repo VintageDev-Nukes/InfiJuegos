@@ -1,0 +1,483 @@
+cls
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+:VER0
+echo Estas son las versiones disponibles:
+echo.
+echo [0 - Classic]
+echo [1 - Indev]
+echo [2 - Indfdev]
+echo [3 - Alpha]
+echo [4 - Beta]
+echo [5 - Version oficial (RC)]
+echo [6 - Otras versiones]
+echo %txt11%
+echo.
+set /p "ver0=>> "
+if not defined ver0 goto:VER0
+if "%ver0%"=="0" goto:VER1
+if "%ver0%"=="1" goto:VER2
+if "%ver0%"=="2" goto:VER3
+if "%ver0%"=="3" goto:VER4
+if "%ver0%"=="4" goto:VER5
+if "%ver0%"=="5" goto:VER6
+if "%ver0%"=="6" goto:VER7
+if "%ver0%"=="b" goto:MCPORTABLE
+if "%ver0%"=="re" goto:RE45
+if "%ver0%"=="r" goto:R45
+if "%ver0%"=="p" goto:LOGO
+if "%ver0%"=="vi" goto:VISIT
+
+:VER1
+echo Esta opcion aun no esta disponible para esta version.
+pause
+goto:VER0
+
+:VER2
+(
+echo indev.jar
+) > "%FilePath%\set-launcher.txt"
+
+:VER3
+(
+echo infdev.jar
+) > "%FilePath%\set-launcher.txt"
+
+:VER4
+cls
+echo Que version se desea poner (de las disponibles):
+echo.
+echo [0 - Minecraft Alpha 1.0.14]
+echo [1 - Minecraft Alpha 1.0.17_04]
+echo [2 - Minecraft Alpha 1.1.0]
+echo [3 - Minecraft Alpha 1.2.6]
+echo %txt11%
+echo.
+set /p "alp=>> "
+if not defined alp goto:VER4
+if "%alp%"=="0" goto:Alp-1
+if "%alp%"=="1" goto:Alp-2
+if "%alp%"=="2" goto:Alp-3
+if "%alp%"=="3" goto:Alp-4
+pause
+goto:VER0
+if not defined alp goto:VER4
+if "%alp%"=="0" goto:Alp-1
+if "%alp%"=="1" goto:Alp-2
+if "%alp%"=="2" goto:Alp-3
+if "%alp%"=="3" goto:Alp-4
+
+:Alp-1
+(
+echo mca1014.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Alp-2
+(
+echo mca101704.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Alp-3
+(
+echo mca110.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Alp-4
+(
+echo mca126.jar
+) > "%FilePath%\set-launcher.txt"
+
+:VER5
+cls
+echo Que version desea ponerse (de las disponibles):
+echo.
+echo [0 - Minecraft Beta 1.0_01]
+echo [1 - Minecraft Beta 1.0.2]
+echo [2 - Minecraft Beta 1.1_02]
+echo [3 - Minecraft Beta 1.2_02]
+echo [4 - Minecraft Beta 1.3]
+echo [5 - Minecraft Beta 1.3_01]
+echo [6 - Minecraft Beta 1.4]
+echo [7 - Minecraft Beta 1.4_01]
+echo [8 - Minecraft Beta 1.5]
+echo [9 - Minecraft Beta 1.5_01]
+echo [10 - Minecraft Beta 1.6.2]
+echo [11 - Minecraft Beta 1.6.4]
+echo [12 - Minecraft Beta 1.6.5]
+echo [13 - Minecraft Beta 1.6.6]
+echo [14 - Minecraft Beta 1.7_01]
+echo [15 - Minecraft Beta 1.7.2]
+echo [16 - Minecraft Beta 1.7.3]
+echo [17 - Minecraft Beta 1.8 Pre]
+echo [18 - Minecraft Beta 1.8 Pre 2]
+echo [19 - Minecraft Beta 1.8.1]
+echo [20 - Minecraft Beta 1.9 Pre]
+echo [21 - Minecraft Beta 1.9 Pre 2]
+echo [22 - Minecraft Beta 1.9 Pre 3]
+echo [23 - Minecraft Beta 1.9 Pre 4]
+echo [24 - Minecraft Beta 1.9 Pre 5]
+echo [25 - Minecraft Beta 1.9 Pre 6]
+echo %txt11%
+echo.
+set /p "beta=>> "
+if not defined beta goto:VER5
+if "%beta%"=="0" goto:Beta-1
+if "%beta%"=="1" goto:Beta-2
+if "%beta%"=="2" goto:Beta-3
+if "%beta%"=="3" goto:Beta-4
+if "%beta%"=="4" goto:Beta-5
+if "%beta%"=="5" goto:Beta-6
+if "%beta%"=="6" goto:Beta-7
+if "%beta%"=="7" goto:Beta-8
+if "%beta%"=="8" goto:Beta-9
+if "%beta%"=="9" goto:Beta-10
+if "%beta%"=="10" goto:Beta-11
+if "%beta%"=="11" goto:Beta-12
+if "%beta%"=="12" goto:Beta-13
+if "%beta%"=="13" goto:Beta-14
+if "%beta%"=="14" goto:Beta-15
+if "%beta%"=="15" goto:Beta-16
+if "%beta%"=="16" goto:Beta-17
+if "%beta%"=="17" goto:Beta-18
+if "%beta%"=="18" goto:Beta-19
+if "%beta%"=="19" goto:Beta-20
+if "%beta%"=="20" goto:Beta-21
+if "%beta%"=="21" goto:Beta-22
+if "%beta%"=="22" goto:Beta-23
+if "%beta%"=="23" goto:Beta-24
+if "%beta%"=="24" goto:Beta-25
+if "%beta%"=="25" goto:Beta-26
+pause
+goto:VER0
+
+:Beta-1
+(
+echo mcb1001.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Beta-2
+(
+echo mcb102.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Beta-3
+(
+echo mcb1102.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Beta-4
+(
+echo mcb1202.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Beta-5
+(
+echo mcb13.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Beta-6
+(
+echo mcb1301.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Beta-7
+(
+echo mcb14.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Beta-8
+(
+echo mcb1401.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Beta-9
+(
+echo mcb15.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Beta-10
+(
+echo mcb1501.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Beta-11
+(
+echo mcb162.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Beta-12
+(
+echo mcb164.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Beta-13
+(
+echo mcb165.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Beta-14
+(
+echo mcb166.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Beta-15
+(
+echo mcb1701.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Beta-16
+(
+echo mcb172.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Beta-17
+(
+echo mcb173.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Beta-18
+(
+echo mcb18pre.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Beta-19
+(
+echo mcb18pre2.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Beta-20
+(
+echo mcb181.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Beta-21
+(
+echo mcb19pre.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Beta-22
+(
+echo mcb19pre2.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Beta-23
+(
+echo mcb19pre3.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Beta-24
+(
+echo mcb19pre4.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Beta-25
+(
+echo mcb19pre5.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Beta-26
+(
+echo mcb19pre6.jar
+) > "%FilePath%\set-launcher.txt"
+
+:VER6
+echo [0 - Minecraft RC2]
+echo [1 - Minecraft 1.0.0]
+echo [2 - Minecraft 11w47a]
+echo [3 - Minecraft 11w48a]
+echo [4 - Minecraft 11w49a]
+echo [5 - Minecraft 11w50a]
+echo [6 - Minecraft 1.1]
+echo [7 - Minecraft 12w03a]
+echo [8 - Minecraft 12w04a]
+echo [9 - Minecraft 12w05a]
+echo [10 - Minecraft 12w05b]
+echo [11 - Minecraft 12w06a]
+echo [12 - Minecraft 12w07a]
+echo [13 - Minecraft 12w07b]
+echo [14 - Minecraft 12w08a]
+echo [15 - Minecraft 1.2.0 Preview]
+echo [16 - Minecraft 1.2.1]
+echo [17 - Minecraft 1.2.2]
+echo [18 - Minecraft 1.2.3]
+echo [19 - Minecraft 1.2.4]
+echo [20 - Minecraft 1.2.5]
+echo [21 - Minecraft 12w15a]
+echo [22 - Minecraft 12w16a]
+echo [23 - Minecraft 12w17a]
+echo [24 - Minecraft 12w21a]
+echo [25 - Minecraft 12w21b]
+echo.
+if not defined ofc goto:VER6
+if "%ofc%"=="0" goto:Ofc-1
+if "%ofc%"=="1" goto:Ofc-2
+if "%ofc%"=="2" goto:Ofc-3
+if "%ofc%"=="3" goto:Ofc-4
+if "%ofc%"=="4" goto:Ofc-5
+if "%ofc%"=="5" goto:Ofc-6
+if "%ofc%"=="6" goto:Ofc-7
+if "%ofc%"=="7" goto:Ofc-8
+if "%ofc%"=="8" goto:Ofc-9
+if "%ofc%"=="9" goto:Ofc-10
+if "%ofc%"=="10" goto:Ofc-11
+if "%ofc%"=="11" goto:Ofc-12
+if "%ofc%"=="12" goto:Ofc-13
+if "%ofc%"=="13" goto:Ofc-14
+if "%ofc%"=="14" goto:Ofc-15
+if "%ofc%"=="15" goto:Ofc-16
+if "%ofc%"=="16" goto:Ofc-17
+if "%ofc%"=="17" goto:Ofc-18
+if "%ofc%"=="18" goto:Ofc-19
+if "%ofc%"=="19" goto:Ofc-20
+if "%ofc%"=="20" goto:Ofc-21
+if "%ofc%"=="21" goto:Ofc-22
+if "%ofc%"=="22" goto:Ofc-23
+if "%ofc%"=="23" goto:Ofc-24
+if "%ofc%"=="24" goto:Ofc-25
+if "%ofc%"=="25" goto:Ofc-26
+
+:Ofc-1
+(
+echo mcrc2.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Ofc-2
+(
+echo mc100.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Ofc-3
+(
+echo mc11w47a.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Ofc-4
+(
+echo mc11w48a.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Ofc-5
+(
+echo mc11w49a.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Ofc-6
+(
+echo mc11w50a.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Ofc-7
+(
+echo mc11.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Ofc-8
+(
+echo mc12w03a.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Ofc-9
+(
+echo mc12w04a.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Ofc-10
+(
+echo mc12w05a.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Ofc-11
+(
+echo mc12w05b.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Ofc-12
+(
+echo mc12w06a.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Ofc-13
+(
+echo mc12w07a.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Ofc-14
+(
+echo mc12w07b.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Ofc-15
+(
+echo mc12w08a.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Ofc-16
+(
+echo mc120prev.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Ofc-17
+(
+echo mc121.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Ofc-18
+(
+echo mc122.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Ofc-19
+(
+echo mc123.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Ofc-20
+(
+echo mc124.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Ofc-21
+(
+echo mc125.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Ofc-22
+(
+echo mc12w15a.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Ofc-23
+(
+echo mc12w16a.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Ofc-24
+(
+echo mc12w17a.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Ofc-25
+(
+echo mc12w21a.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Ofc-26
+(
+echo mc12w21b.jar
+) > "%FilePath%\set-launcher.txt"
+
+:VER7
+cls
+echo Que version desea ponerse:
+echo.
+echo [0 - PCGamerVersion]
+echo %txt11%
+echo.
+set /p "oth=>> "
+if not defined oth goto:VER7
+if "%oth%"=="0" goto:Oth-1
+
+:Oth-1
+(
+echo mc.jar
+) > "%FilePath%\set-launcher.txt"
+

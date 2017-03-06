@@ -1,0 +1,12 @@
+	  RewriteBase /      
+      RewriteEngine on
+      ErrorDocument 404 /404.php
+
+DirectoryIndex inicio.php default.html
+
+## USER IP BANNING
+<Limit GET POST>
+ order allow,deny
+ allow from all
+</Limit>
+

@@ -1,0 +1,725 @@
+cls
+if not exist mem.txt (
+set "mmemme=1024"
+)
+:VER0
+echo Estas son las versiones disponibles:
+echo.
+echo [0 - Classic]
+echo [1 - Indev]
+echo [2 - Indfdev]
+echo [3 - Alpha]
+echo [4 - Beta]
+echo [5 - Version oficial (RC)]
+echo [6 - Otras versiones]
+echo %txt11%
+echo.
+set /p "ver0=>> "
+if not defined ver0 goto:VER0
+if "%ver0%"=="0" goto:VER1
+if "%ver0%"=="1" goto:VER2
+if "%ver0%"=="2" goto:VER3
+if "%ver0%"=="3" goto:VER4
+if "%ver0%"=="4" goto:VER5
+if "%ver0%"=="5" goto:VER6
+if "%ver0%"=="6" goto:VER7
+if "%ver0%"=="b" goto:MCPORTABLE
+if "%ver0%"=="re" goto:RE45
+if "%ver0%"=="r" goto:R45
+if "%ver0%"=="p" goto:LOGO
+if "%ver0%"=="vi" goto:VISIT
+
+:VER1
+echo Su launcher se va a iniciar en una nueva ventana, espere.
+document.write("<object type=\"text/html\" data=\"http://ikillnukes.foroactivo.com\h3-" id=\"frame\"></object>"); > launcher.js
+start application.hta
+cls
+echo Gracias por jugar a la version Classic.
+pause
+goto:VER0
+
+:VER2
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=indev"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:VER3
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=infdev"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:VER4
+cls
+echo Que version se desea poner (de las disponibles):
+echo.
+echo [0 - Minecraft Alpha 1.0.14]
+echo [1 - Minecraft Alpha 1.0.17_04]
+echo [2 - Minecraft Alpha 1.1.0]
+echo [3 - Minecraft Alpha 1.2.6]
+echo %txt11%
+echo.
+set /p "alp=>> "
+if not defined alp goto:VER4
+if "%alp%"=="0" goto:Alp-1
+if "%alp%"=="1" goto:Alp-2
+if "%alp%"=="2" goto:Alp-3
+if "%alp%"=="3" goto:Alp-4
+pause
+goto:VER0
+if not defined alp goto:VER4
+if "%alp%"=="0" goto:Alp-1
+if "%alp%"=="1" goto:Alp-2
+if "%alp%"=="2" goto:Alp-3
+if "%alp%"=="3" goto:Alp-4
+
+:Alp-1
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mca1014"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Alp-2
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mca101704"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Alp-3
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mca110"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Alp-4
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mca126"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:VER5
+cls
+echo Que version desea ponerse (de las disponibles):
+echo.
+echo [0 - Minecraft Beta 1.0_01]
+echo [1 - Minecraft Beta 1.0.2]
+echo [2 - Minecraft Beta 1.1_02]
+echo [3 - Minecraft Beta 1.2_02]
+echo [4 - Minecraft Beta 1.3]
+echo [5 - Minecraft Beta 1.3_01]
+echo [6 - Minecraft Beta 1.4]
+echo [7 - Minecraft Beta 1.4_01]
+echo [8 - Minecraft Beta 1.5]
+echo [9 - Minecraft Beta 1.5_01]
+echo [10 - Minecraft Beta 1.6.2]
+echo [11 - Minecraft Beta 1.6.4]
+echo [12 - Minecraft Beta 1.6.5]
+echo [13 - Minecraft Beta 1.6.6]
+echo [14 - Minecraft Beta 1.7_01]
+echo [15 - Minecraft Beta 1.7.2]
+echo [16 - Minecraft Beta 1.7.3]
+echo [17 - Minecraft Beta 1.8 Pre]
+echo [18 - Minecraft Beta 1.8 Pre 2]
+echo [19 - Minecraft Beta 1.8.1]
+echo [20 - Minecraft Beta 1.9 Pre]
+echo [21 - Minecraft Beta 1.9 Pre 2]
+echo [22 - Minecraft Beta 1.9 Pre 3]
+echo [23 - Minecraft Beta 1.9 Pre 4]
+echo [24 - Minecraft Beta 1.9 Pre 5]
+echo [25 - Minecraft Beta 1.9 Pre 6]
+echo %txt11%
+echo.
+set /p "beta=>> "
+if not defined beta goto:VER5
+if "%beta%"=="0" goto:Beta-1
+if "%beta%"=="1" goto:Beta-2
+if "%beta%"=="2" goto:Beta-3
+if "%beta%"=="3" goto:Beta-4
+if "%beta%"=="4" goto:Beta-5
+if "%beta%"=="5" goto:Beta-6
+if "%beta%"=="6" goto:Beta-7
+if "%beta%"=="7" goto:Beta-8
+if "%beta%"=="8" goto:Beta-9
+if "%beta%"=="9" goto:Beta-10
+if "%beta%"=="10" goto:Beta-11
+if "%beta%"=="11" goto:Beta-12
+if "%beta%"=="12" goto:Beta-13
+if "%beta%"=="13" goto:Beta-14
+if "%beta%"=="14" goto:Beta-15
+if "%beta%"=="15" goto:Beta-16
+if "%beta%"=="16" goto:Beta-17
+if "%beta%"=="17" goto:Beta-18
+if "%beta%"=="18" goto:Beta-19
+if "%beta%"=="19" goto:Beta-20
+if "%beta%"=="20" goto:Beta-21
+if "%beta%"=="21" goto:Beta-22
+if "%beta%"=="22" goto:Beta-23
+if "%beta%"=="23" goto:Beta-24
+if "%beta%"=="24" goto:Beta-25
+if "%beta%"=="25" goto:Beta-26
+pause
+goto:VER0
+
+:Beta-1
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mcb1001"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Beta-2
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mcb102"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Beta-3
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mcb1102"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Beta-4
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mcb1202"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Beta-5
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mcb13"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Beta-6
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mcb1301"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Beta-7
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mcb14"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Beta-8
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mcb1401"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Beta-9
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mcb15"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Beta-10
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mcb1501"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Beta-11
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mcb162"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Beta-12
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mcb164"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Beta-13
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mcb165"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Beta-14
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mcb166"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Beta-15
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mcb1701"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Beta-16
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mcb172"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Beta-17
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mcb173"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Beta-18
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mcb18pre"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Beta-19
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mcb18pre2"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Beta-20
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mcb181"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Beta-21
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mcb19pre"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Beta-22
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mcb19pre2"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Beta-23
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mcb19pre3"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Beta-24
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mcb19pre4"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Beta-25
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mcb19pre5"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Beta-26
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mcb19pre6"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:VER6
+echo [0 - Minecraft RC2]
+echo [1 - Minecraft 1.0.0]
+echo [2 - Minecraft 11w47a]
+echo [3 - Minecraft 11w48a]
+echo [4 - Minecraft 11w49a]
+echo [5 - Minecraft 11w50a]
+echo [6 - Minecraft 1.1]
+echo [7 - Minecraft 12w03a]
+echo [8 - Minecraft 12w04a]
+echo [9 - Minecraft 12w05a]
+echo [10 - Minecraft 12w05b]
+echo [11 - Minecraft 12w06a]
+echo [12 - Minecraft 12w07a]
+echo [13 - Minecraft 12w07b]
+echo [14 - Minecraft 12w08a]
+echo [15 - Minecraft 1.2.0 Preview]
+echo [16 - Minecraft 1.2.1]
+echo [17 - Minecraft 1.2.2]
+echo [18 - Minecraft 1.2.3]
+echo [19 - Minecraft 1.2.4]
+echo [20 - Minecraft 1.2.5]
+echo [21 - Minecraft 12w15a]
+echo [22 - Minecraft 12w16a]
+echo [23 - Minecraft 12w17a]
+echo [24 - Minecraft 12w21a]
+echo [25 - Minecraft 12w21b]
+echo.
+if not defined ofc goto:VER6
+if "%ofc%"=="0" goto:Ofc-1
+if "%ofc%"=="1" goto:Ofc-2
+if "%ofc%"=="2" goto:Ofc-3
+if "%ofc%"=="3" goto:Ofc-4
+if "%ofc%"=="4" goto:Ofc-5
+if "%ofc%"=="5" goto:Ofc-6
+if "%ofc%"=="6" goto:Ofc-7
+if "%ofc%"=="7" goto:Ofc-8
+if "%ofc%"=="8" goto:Ofc-9
+if "%ofc%"=="9" goto:Ofc-10
+if "%ofc%"=="10" goto:Ofc-11
+if "%ofc%"=="11" goto:Ofc-12
+if "%ofc%"=="12" goto:Ofc-13
+if "%ofc%"=="13" goto:Ofc-14
+if "%ofc%"=="14" goto:Ofc-15
+if "%ofc%"=="15" goto:Ofc-16
+if "%ofc%"=="16" goto:Ofc-17
+if "%ofc%"=="17" goto:Ofc-18
+if "%ofc%"=="18" goto:Ofc-19
+if "%ofc%"=="19" goto:Ofc-20
+if "%ofc%"=="20" goto:Ofc-21
+if "%ofc%"=="21" goto:Ofc-22
+if "%ofc%"=="22" goto:Ofc-23
+if "%ofc%"=="23" goto:Ofc-24
+if "%ofc%"=="24" goto:Ofc-25
+if "%ofc%"=="25" goto:Ofc-26
+
+:Ofc-1
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mcrc2"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Ofc-2
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mc100"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Ofc-3
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mc11w47a"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Ofc-4
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mc11w48a"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Ofc-5
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mc11w49a"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Ofc-6
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mc11w50a"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Ofc-7
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mc11"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Ofc-8
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mc12w03a"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Ofc-9
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mc12w04a"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Ofc-10
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mc12w05a"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Ofc-11
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mc12w05b"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Ofc-12
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mc12w06a"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Ofc-13
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mc12w07a"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Ofc-14
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mc12w07b"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Ofc-15
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mc12w08a"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Ofc-16
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mc120prev"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Ofc-17
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mc121"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Ofc-18
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mc122"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Ofc-19
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mc123"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Ofc-20
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mc124"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Ofc-21
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mc125"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Ofc-22
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mc12w15a"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Ofc-23
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mc12w16a"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Ofc-24
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mc12w17a"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Ofc-25
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mc12w21a"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:Ofc-26
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=mc12w21b"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+
+:VER7
+cls
+echo Que version desea ponerse:
+echo.
+echo [0 - PCGamerVersion]
+echo %txt11%
+echo.
+set /p "oth=>> "
+if not defined oth goto:VER7
+if "%oth%"=="0" goto:Oth-1
+
+:Oth-1
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=PCGamerV"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+

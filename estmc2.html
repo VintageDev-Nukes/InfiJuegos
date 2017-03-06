@@ -1,0 +1,698 @@
+cls
+:VER0
+echo Estas son las versiones disponibles:
+echo.
+echo [0 - Classic]
+echo [1 - Indev]
+echo [2 - Indfdev]
+echo [3 - Alpha]
+echo [4 - Beta]
+echo [5 - Version oficial (RC)]
+echo [6 - Otras versiones]
+echo %txt11%
+echo.
+set /p "ver0=>> "
+if not defined ver0 goto:VER0
+if "%ver0%"=="0" goto:VER1
+if "%ver0%"=="1" goto:VER2
+if "%ver0%"=="2" goto:VER3
+if "%ver0%"=="3" goto:VER4
+if "%ver0%"=="4" goto:VER5
+if "%ver0%"=="5" goto:VER6
+if "%ver0%"=="6" goto:VER7
+if "%ver0%"=="b" goto:MCUPT3
+if "%ver0%"=="re" goto:RE45
+if "%ver0%"=="r" goto:R45
+if "%ver0%"=="p" goto:LOGO
+if "%ver0%"=="vi" goto:VISIT
+
+:VER1
+echo Esta opcion aun no esta disponible para esta version.
+pause
+
+:VER2
+cd %FilePath%
+start updq.bat
+cls
+Set "Url=https://dl.dropbox.com/s/qhve2c3tyqq22um/Indev.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+cls
+echo Su archivo se ha descargado con exito.
+pause
+goto:PLAY
+
+:VER3
+cd %FilePath%
+start updq.bat
+cls
+Set "Url=https://dl.dropbox.com/s/caizqespv1ln8gh/Infdev.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+cls
+echo Su archivo se ha descargado con exito.
+pause
+goto:PLAY
+
+:VER4
+cls
+echo Que version se desea poner (de las disponibles):
+echo.
+echo [0 - Minecraft Alpha 1.0.14]
+echo [1 - Minecraft Alpha 1.0.17_04]
+echo [2 - Minecraft Alpha 1.1.0]
+echo [3 - Minecraft Alpha 1.2.6]
+echo %txt11%
+echo.
+set /p "alp=>> "
+if not defined alp goto:VER4
+if "%alp%"=="0" goto:Alp-1
+if "%alp%"=="1" goto:Alp-2
+if "%alp%"=="2" goto:Alp-3
+if "%alp%"=="3" goto:Alp-4
+pause
+goto:VER0
+
+:Alp-1
+Set "Url=https://dl.dropbox.com/s/er27guey1t8b0vd/minecraft%20alpha%201.0.14.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Alp-2
+Set "Url=https://dl.dropbox.com/s/ekixjgnuwhbmvbt/minecraft%20alpha%201.0.17_04.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Alp-3
+Set "Url=https://dl.dropbox.com/s/o8x66suqusm0njf/minecraft%20alpha%201.1.0.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Alp-4
+Set "Url=https://dl.dropbox.com/s/zqooh0x3qzuc7sx/minecraft%20alpha%201.2.6.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:VER5
+cd %FilePath%
+start updq.bat
+cls
+echo Que version desea ponerse (de las disponibles):
+echo.
+echo [0 - Minecraft Beta 1.0_01]
+echo [1 - Minecraft Beta 1.0.2]
+echo [2 - Minecraft Beta 1.1_02]
+echo [3 - Minecraft Beta 1.2_02]
+echo [4 - Minecraft Beta 1.3]
+echo [5 - Minecraft Beta 1.3_01]
+echo [6 - Minecraft Beta 1.4]
+echo [7 - Minecraft Beta 1.4_01]
+echo [8 - Minecraft Beta 1.5]
+echo [9 - Minecraft Beta 1.5_01]
+echo [10 - Minecraft Beta 1.6.2]
+echo [11 - Minecraft Beta 1.6.4]
+echo [12 - Minecraft Beta 1.6.5]
+echo [13 - Minecraft Beta 1.6.6]
+echo [14 - Minecraft Beta 1.7_01]
+echo [15 - Minecraft Beta 1.7.2]
+echo [16 - Minecraft Beta 1.7.3]
+echo [17 - Minecraft Beta 1.8 Pre]
+echo [18 - Minecraft Beta 1.8 Pre 2]
+echo [19 - Minecraft Beta 1.8.1]
+echo [20 - Minecraft Beta 1.9 Pre]
+echo [21 - Minecraft Beta 1.9 Pre 2]
+echo [22 - Minecraft Beta 1.9 Pre 3]
+echo [23 - Minecraft Beta 1.9 Pre 4]
+echo [24 - Minecraft Beta 1.9 Pre 5]
+echo [25 - Minecraft Beta 1.9 Pre 6]
+echo %txt11%
+echo.
+set /p "beta=>> "
+if not defined beta goto:VER5
+if "%beta%"=="0" goto:Beta-1
+if "%beta%"=="1" goto:Beta-2
+if "%beta%"=="2" goto:Beta-3
+if "%beta%"=="3" goto:Beta-4
+if "%beta%"=="5" goto:Beta-5
+if "%beta%"=="6" goto:Beta-6
+if "%beta%"=="7" goto:Beta-7
+if "%beta%"=="8" goto:Beta-8
+if "%beta%"=="9" goto:Beta-9
+if "%beta%"=="10" goto:Beta-10
+if "%beta%"=="11" goto:Beta-11
+if "%beta%"=="12" goto:Beta-12
+if "%beta%"=="13" goto:Beta-13
+if "%beta%"=="14" goto:Beta-14
+if "%beta%"=="15" goto:Beta-15
+if "%beta%"=="16" goto:Beta-16
+if "%beta%"=="17" goto:Beta-17
+if "%beta%"=="18" goto:Beta-18
+if "%beta%"=="19" goto:Beta-19
+if "%beta%"=="20" goto:Beta-20
+if "%beta%"=="21" goto:Beta-21
+if "%beta%"=="22" goto:Beta-22
+if "%beta%"=="23" goto:Beta-23
+if "%beta%"=="24" goto:Beta-24
+if "%beta%"=="25" goto:Beta-25
+if "%beta%"=="4" goto:Beta-26
+pause
+goto:VER0
+
+:Beta-1
+Set "Url=https://dl.dropbox.com/s/8779ay2wr4u7kbc/minecraft%20beta%201.0_01.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Beta-2
+Set "Url=https://dl.dropbox.com/s/56k7crrn569914b/minecraft%20beta%201.0.2.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Beta-3
+Set "Url=https://dl.dropbox.com/s/4e1unfcqlo9h54j/minecraft%20beta%201.1_02.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Beta-4
+Set "Url=https://dl.dropbox.com/s/n5mnyop3fiqdzz7/minecraft%20beta%201.2_02.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Beta-5
+Set "Url=https://dl.dropbox.com/s/eazb70g27xa7byw/minecraft%20beta%201.3_01.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Beta-6
+Set "Url=https://dl.dropbox.com/s/nhjtvq47xt4az55/minecraft%20beta%201.4.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Beta-7
+Set "Url=https://dl.dropbox.com/s/1px3gzqtbv998xd/minecraft%20beta%201.4_01.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Beta-8
+Set "Url=https://dl.dropbox.com/s/ems9i2q1espv8ue/minecraft%20beta%201.5.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Beta-9
+Set "Url=https://dl.dropbox.com/s/7tz98bq8z7kjjlb/minecraft%20beta%201.5_01.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Beta-10
+Set "Url=https://dl.dropbox.com/s/cu3wjk69x9q8a44/minecraft%20beta%201.6.2.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Beta-11
+Set "Url=https://dl.dropbox.com/s/y0fsf8xqdpd0ij9/minecraft%20beta%201.6.4.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Beta-12
+Set "Url=https://dl.dropbox.com/s/kzo2dvh4j4n66sb/minecraft%20beta%201.6.5.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Beta-13
+Set "Url=https://dl.dropbox.com/s/9idwat5b1ddbmgg/minecraft%20beta%201.6.6.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Beta-14
+Set "Url=https://dl.dropbox.com/s/yrl03u2clluq3n6/minecraft%20beta%201.7_01.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Beta-15
+Set "Url=https://dl.dropbox.com/s/q48iswp6idb4ze3/minecraft%20beta%201.7.2.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Beta-16
+Set "Url=https://dl.dropbox.com/s/36qnv6ensr5e3l6/minecraft%20beta%201.7.3.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Beta-17
+Set "Url=https://dl.dropbox.com/s/swafn39pdzuwl50/minecraft%20beta%201.8%20pre-release.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Beta-18
+Set "Url=https://dl.dropbox.com/s/uu45cnn46ynx9at/minecraft%20beta%201.8%20pre-release%202.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Beta-19
+Set "Url=https://dl.dropbox.com/s/vhoxm5f7tto9xod/minecraft%20beta%201.8.1.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Beta-20
+Set "Url=https://dl.dropbox.com/s/zkix58fynuotog4/minecraft%20beta%201.9%20pre-release.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Beta-21
+Set "Url=https://dl.dropbox.com/s/pfclnnoajblznp6/minecraft%20beta%201.9%20pre-release%202.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Beta-22
+Set "Url=https://dl.dropbox.com/s/ugko1311sqe6j78/minecraft%20beta%201.9%20pre-release%203.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Beta-23
+Set "Url=https://dl.dropbox.com/s/mf0antdgrunglpl/minecraft%20beta%201.9%20pre-release%204.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Beta-24
+Set "Url=https://dl.dropbox.com/s/d7w3x1jqw7vb9y0/minecraft%20beta%201.9%20pre-release%205.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Beta-25
+Set "Url=https://dl.dropbox.com/s/4cdn9z0kqft85eu/minecraft%20beta%201.9%20pre-release%206.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Beta-26
+Set "Url=https://dl.dropbox.com/s/vvk4d27kasac7pk/minecraft%20beta%201.3.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:VER6
+cd %FilePath%
+start updq.bat
+cls
+echo [0 - Minecraft RC2]
+echo [1 - Minecraft 1.0.0]
+echo [2 - Minecraft 11w47a]
+echo [3 - Minecraft 11w48a]
+echo [4 - Minecraft 11w49a]
+echo [5 - Minecraft 11w50a]
+echo [6 - Minecraft 1.1]
+echo [7 - Minecraft 12w03a]
+echo [8 - Minecraft 12w04a]
+echo [9 - Minecraft 12w05a]
+echo [10 - Minecraft 12w05b]
+echo [11 - Minecraft 12w06a]
+echo [12 - Minecraft 12w07a]
+echo [13 - Minecraft 12w07b]
+echo [14 - Minecraft 12w08a]
+echo [15 - Minecraft 1.2.0 Preview]
+echo [16 - Minecraft 1.2.1]
+echo [17 - Minecraft 1.2.2]
+echo [18 - Minecraft 1.2.3]
+echo [19 - Minecraft 1.2.4]
+echo [20 - Minecraft 1.2.5]
+echo [21 - Minecraft 12w15a]
+echo [22 - Minecraft 12w16a]
+echo [23 - Minecraft 12w17a]
+echo [24 - Minecraft 12w21a]
+echo [25 - Minecraft 12w21b]
+echo.
+set /p "ofc=>> "
+if not defined ofc goto:VER6
+if "%ofc%"=="0" goto:Ofc-1
+if "%ofc%"=="1" goto:Ofc-2
+if "%ofc%"=="2" goto:Ofc-3
+if "%ofc%"=="3" goto:Ofc-4
+if "%ofc%"=="4" goto:Ofc-5
+if "%ofc%"=="6" goto:Ofc-6
+if "%ofc%"=="7" goto:Ofc-7
+if "%ofc%"=="8" goto:Ofc-8
+if "%ofc%"=="9" goto:Ofc-9
+if "%ofc%"=="10" goto:Ofc-10
+if "%ofc%"=="11" goto:Ofc-11
+if "%ofc%"=="12" goto:Ofc-12
+if "%ofc%"=="13" goto:Ofc-13
+if "%ofc%"=="14" goto:Ofc-14
+if "%ofc%"=="15" goto:Ofc-15
+if "%ofc%"=="16" goto:Ofc-16
+if "%ofc%"=="17" goto:Ofc-17
+if "%ofc%"=="18" goto:Ofc-18
+if "%ofc%"=="19" goto:Ofc-19
+if "%ofc%"=="20" goto:Ofc-20
+if "%ofc%"=="21" goto:Ofc-21
+if "%ofc%"=="22" goto:Ofc-22
+if "%ofc%"=="23" goto:Ofc-23
+if "%ofc%"=="24" goto:Ofc-24
+if "%ofc%"=="25" goto:Ofc-25
+if "%ofc%"=="26" goto:Ofc-6
+pause
+goto:VER0
+
+:Ofc-1
+Set "Url=https://dl.dropbox.com/s/6mmjxfcbhqrpuwh/minecraft%20final%20rc2.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Ofc-2
+Set "Url=https://dl.dropbox.com/s/ual9qj6l95lzp6m/minecraft%201.0.0.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Ofc-3
+Set "Url=https://dl.dropbox.com/s/0lg7ihxeymlqs98/minecraft%2011w47a.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jarmc"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Ofc-4
+Set "Url=https://dl.dropbox.com/s/soywogs7oq417jf/minecraft%2011w48a.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Ofc-5
+Set "Url=https://dl.dropbox.com/s/f3m5u8hijw90bih/minecraft%2011w49a.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Ofc-6
+Set "Url=https://dl.dropbox.com/s/tzg4gri9gpqrvb3/minecraft%201.1.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Ofc-7
+Set "Url=https://dl.dropbox.com/s/49u5jc6ndpsc0o6/minecraft%2012w03a.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Ofc-8
+Set "Url=https://dl.dropbox.com/s/2jig2iwo1wma804/minecraft%2012w04a.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Ofc-9
+Set "Url=https://dl.dropbox.com/s/xdrvamu6hb9p1os/minecraft%2012w05a.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Ofc-10
+Set "Url=https://dl.dropbox.com/s/3vwn2r0vfsorzj5/minecraft%2012w05b.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Ofc-11
+Set "Url=https://dl.dropbox.com/s/pbw0xzm567nsj56/minecraft%2012w06a.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Ofc-12
+Set "Url=https://dl.dropbox.com/s/jcbt6kim9goge14/minecraft%2012w07a.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Ofc-13
+Set "Url=https://dl.dropbox.com/s/y09s04h1e8lj2zq/minecraft%2012w07b.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Ofc-14
+Set "Url=https://dl.dropbox.com/s/cyux05vfgr0thl2/minecraft%2012w08a.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Ofc-15
+Set "Url=https://dl.dropbox.com/s/5izooz7cngt2zm2/minecraft%201.2.0%20preview.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Ofc-16
+Set "Url=https://dl.dropbox.com/s/sxwvlsef373lott/minecraft%201.2.1.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Ofc-17
+Set "Url=https://dl.dropbox.com/s/sxwvlsef373lott/minecraft%201.2.2.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Ofc-18
+Set "Url=https://dl.dropbox.com/s/ny3pa16f22npv8i/minecraft%201.2.3.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Ofc-19
+Set "Url=https://dl.dropbox.com/s/uzkid6b6hlb3nju/minecraft%201.2.4.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Ofc-20
+Set "Url=https://dl.dropbox.com/s/aut35jvqubznvz4/minecraft%201.2.5.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Sub-20
+(
+echo mc125.jar
+) > "%FilePath%\set-launcher.txt"
+
+:Ofc-21
+Set "Url=https://dl.dropbox.com/s/cu3zcx2vtvuemrq/minecraft%2012w15a.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Ofc-22
+Set "Url=https://dl.dropbox.com/s/tqpr87l812d13bu/minecraft%2012w16a.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Ofc-23
+Set "Url=https://dl.dropbox.com/s/vol6rxcvfe869mc/minecraft%2012w17a.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Ofc-24
+Set "Url=https://dl.dropbox.com/s/wxx3ulss8t55ekn/minecraft%2012w21a.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Ofc-25
+Set "Url=https://dl.dropbox.com/s/9zmzwybjq80yavp/minecraft%2012w21b.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jarmc"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:Ofc-26
+Set "Url=https://dl.dropbox.com/s/w0uxk9l557buqmy/minecraft%2011w50a.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jarmc"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:VER7
+cls
+echo Que version desea ponerse:
+echo.
+echo [0 - PCGamerVersion]
+echo %txt11%
+echo.
+set /p "oth=>> "
+if not defined oth goto:VER7
+if "%oth%"=="0" goto:Oth-1
+
+:Oth-1
+Set "Url=https://dl.dropbox.com/s/avcxuv44z2xtuzv/PCGamerVersion.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\minecraft.jar"
+
+bin\wget --no-check-certificate -O %TempFile% %URL%
+pause
+goto:PLAY
+
+:PLAY
+cls
+echo Desea ejecutar ya Minecraft (S/N):
+echo.
+set /p "play=>> "
+if not defined play goto:PLAY
+if "%play%"=="" goto:PLAY2
+if "%play%"=="" goto:BYE
+:PLAY2
+for /f "tokens=*" %%x in (login.txt) do (
+set user=%%x)
+for /f "tokens=*" %%x in (mem.txt) do (
+set "mmemme=%%x")
+set "mcver=minecraft"
+cd %APPDATA%\.techniclauncher-crack\gamemodes\MCPortable
+start crack.bat
+pause
+goto:THX
+:THX
+echo Gracias por jugar a Minecraft.
+pause
+goto:MCPORTABLE

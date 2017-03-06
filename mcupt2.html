@@ -1,0 +1,1271 @@
+@echo off
+set CYGWIN
+set CYGWIN=%CYGWIN%;nodosfilewarning
+cls
+:VER0
+echo [0 - Classic]
+echo [1 - Indev]
+echo [2 - Indfdev]
+echo [3 - Alpha]
+echo [4 - Beta]
+echo [5 - Version oficial (RC)]
+echo [6 - Otras versiones]
+echo %txt11%
+echo.
+set /p "ver0=>> "
+if not defined ver0 goto:VER0
+if "%ver0%"=="0" goto:VER1
+if "%ver0%"=="1" goto:VER2
+if "%ver0%"=="2" goto:VER3
+if "%ver0%"=="3" goto:VER4
+if "%ver0%"=="4" goto:VER5
+if "%ver0%"=="5" goto:VER6
+if "%ver0%"=="6" goto:VER7
+if "%ver0%"=="b" goto:MCUPT3
+if "%ver0%"=="re" goto:RE45
+if "%ver0%"=="r" goto:R45
+if "%ver0%"=="p" goto:LOGO
+if "%ver0%"=="vi" goto:VISIT
+
+:VER1
+echo No te puedes descargar esta version, necesitas jugar directamente.
+pause
+
+:VER2
+cd %FilePath%
+start updq.bat
+cls
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\indev.jar"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Su archivo se ha descargado con exito.
+pause
+:INDEV
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:INDEV
+if "%pr-ver%"=="s" goto:Subindev
+if "%pr-ver%"=="n" goto:THX
+
+:Subindev
+(
+echo indev.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+pause
+goto:MCUPT3
+
+:VER3
+cd %FilePath%
+start updq.bat
+cls
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\mcportable\Roaming\.minecraft\bin\infdev.jar"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Su archivo se ha descargado con exito.
+pause
+:INFDEV
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:INFDEV
+if "%pr-ver%"=="s" goto:Subinfdev
+if "%pr-ver%"=="n" goto:THX
+
+:Subinfdev
+(
+echo infdev.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+pause
+goto:MCUPT3
+
+:VER4
+cls
+echo Que version se desea poner (de las disponibles):
+echo.
+echo [0 - Minecraft Alpha 1.0.14]
+echo [1 - Minecraft Alpha 1.0.17_04]
+echo [2 - Minecraft Alpha 1.1.0]
+echo [3 - Minecraft Alpha 1.2.6]
+echo %txt11%
+echo.
+set /p "alp=>> "
+if not defined alp goto:VER4
+if "%alp%"=="0" goto:Alp-1
+if "%alp%"=="1" goto:Alp-2
+if "%alp%"=="2" goto:Alp-3
+if "%alp%"=="3" goto:Alp-4
+pause
+goto:VER0
+
+:Alp-1
+Set "Url=https://dl.dropbox.com/s/er27guey1t8b0vd/minecraft%20alpha%201.0.14.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mca1014.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Alp-1
+if "%pr-ver%"=="s" goto:Suba-1
+if "%pr-ver%"=="n" goto:THX
+
+:Suba-1
+(
+echo mca1014.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Alp-2
+Set "Url=https://dl.dropbox.com/s/ekixjgnuwhbmvbt/minecraft%20alpha%201.0.17_04.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mca101704.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Alp-2
+if "%pr-ver%"=="s" goto:Suba-2
+if "%pr-ver%"=="n" goto:THX
+
+:Suba-2
+(
+echo mca101704.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Alp-3
+Set "Url=https://dl.dropbox.com/s/o8x66suqusm0njf/minecraft%20alpha%201.1.0.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mca110.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Alp-3
+if "%pr-ver%"=="s" goto:Suba-3
+if "%pr-ver%"=="n" goto:THX
+
+:Suba-3
+(
+echo mca110.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Alp-4
+Set "Url=https://dl.dropbox.com/s/zqooh0x3qzuc7sx/minecraft%20alpha%201.2.6.jar?dl=1"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mca126.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Alp-4
+if "%pr-ver%"=="s" goto:Suba-4
+if "%pr-ver%"=="n" goto:THX
+
+:Suba-4
+(
+echo mca126.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:VER5
+cd %FilePath%
+start updq.bat
+cls
+echo Que version desea ponerse (de las disponibles):
+echo.
+echo [0 - Minecraft Beta 1.0_01]
+echo [1 - Minecraft Beta 1.0.2]
+echo [2 - Minecraft Beta 1.1_02]
+echo [3 - Minecraft Beta 1.2_02]
+echo [4 - Minecraft Beta 1.3]
+echo [5 - Minecraft Beta 1.3_01]
+echo [6 - Minecraft Beta 1.4]
+echo [7 - Minecraft Beta 1.4_01]
+echo [8 - Minecraft Beta 1.5]
+echo [9 - Minecraft Beta 1.5_01]
+echo [10 - Minecraft Beta 1.6.2]
+echo [11 - Minecraft Beta 1.6.4]
+echo [12 - Minecraft Beta 1.6.5]
+echo [13 - Minecraft Beta 1.6.6]
+echo [14 - Minecraft Beta 1.7_01]
+echo [15 - Minecraft Beta 1.7.2]
+echo [16 - Minecraft Beta 1.7.3]
+echo [17 - Minecraft Beta 1.8 Pre]
+echo [18 - Minecraft Beta 1.8 Pre 2]
+echo [19 - Minecraft Beta 1.8.1]
+echo [20 - Minecraft Beta 1.9 Pre]
+echo [21 - Minecraft Beta 1.9 Pre 2]
+echo [22 - Minecraft Beta 1.9 Pre 3]
+echo [23 - Minecraft Beta 1.9 Pre 4]
+echo [24 - Minecraft Beta 1.9 Pre 5]
+echo [25 - Minecraft Beta 1.9 Pre 6]
+echo %txt11%
+echo.
+set /p "beta=>> "
+if not defined beta goto:VER5
+if "%beta%"=="0" goto:Beta-1
+if "%beta%"=="1" goto:Beta-2
+if "%beta%"=="2" goto:Beta-3
+if "%beta%"=="3" goto:Beta-4
+if "%beta%"=="5" goto:Beta-5
+if "%beta%"=="6" goto:Beta-6
+if "%beta%"=="7" goto:Beta-7
+if "%beta%"=="8" goto:Beta-8
+if "%beta%"=="9" goto:Beta-9
+if "%beta%"=="10" goto:Beta-10
+if "%beta%"=="11" goto:Beta-11
+if "%beta%"=="12" goto:Beta-12
+if "%beta%"=="13" goto:Beta-13
+if "%beta%"=="14" goto:Beta-14
+if "%beta%"=="15" goto:Beta-15
+if "%beta%"=="16" goto:Beta-16
+if "%beta%"=="17" goto:Beta-17
+if "%beta%"=="18" goto:Beta-18
+if "%beta%"=="19" goto:Beta-19
+if "%beta%"=="20" goto:Beta-20
+if "%beta%"=="21" goto:Beta-21
+if "%beta%"=="22" goto:Beta-22
+if "%beta%"=="23" goto:Beta-23
+if "%beta%"=="24" goto:Beta-24
+if "%beta%"=="25" goto:Beta-25
+if "%beta%"=="4" goto:Beta-26
+pause
+goto:VER0
+
+:Beta-1
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mcb1001.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Beta-1
+if "%pr-ver%"=="s" goto:Subb-1
+if "%pr-ver%"=="n" goto:THX
+
+:Subb-1
+(
+echo mcb1001.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Beta-2
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mcb102.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Beta-2
+if "%pr-ver%"=="s" goto:Subb-2
+if "%pr-ver%"=="n" goto:THX
+
+:Subb-2
+(
+echo mcb102.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Beta-3
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mcb1102.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Beta-3
+if "%pr-ver%"=="s" goto:Subb-3
+if "%pr-ver%"=="n" goto:THX
+
+:Subb-3
+(
+echo mcb1102.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Beta-4
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mcb1202.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Beta-4
+if "%pr-ver%"=="s" goto:Subb-4
+if "%pr-ver%"=="n" goto:THX
+
+:Subb-4
+(
+echo mc1202.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Beta-5
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mcb1301.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Beta-5
+if "%pr-ver%"=="s" goto:Subb-5
+if "%pr-ver%"=="n" goto:THX
+
+:Subb-5
+(
+echo mcb1301.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Beta-6
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mcb14.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Beta-6
+if "%pr-ver%"=="s" goto:Subb-6
+if "%pr-ver%"=="n" goto:THX
+
+:Subb-6
+(
+echo mcb14.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Beta-7
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mcb1401.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Beta-7
+if "%pr-ver%"=="s" goto:Subb-7
+if "%pr-ver%"=="n" goto:THX
+
+:Subb-7
+(
+echo mcb1401.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Beta-8
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mcb15.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Beta-8
+if "%pr-ver%"=="s" goto:Subb-8
+if "%pr-ver%"=="n" goto:THX
+
+:Subb-8
+(
+echo mcb15.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Beta-9
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mcb1501.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Beta-9
+if "%pr-ver%"=="s" goto:Subb-9
+if "%pr-ver%"=="n" goto:THX
+
+:Subb-9
+(
+echo mcb1501.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Beta-10
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mcb162.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Beta-10
+if "%pr-ver%"=="s" goto:Subb-10
+if "%pr-ver%"=="n" goto:THX
+
+:Subb-10
+(
+echo mcb162.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Beta-11
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mcb164.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Beta-11
+if "%pr-ver%"=="s" goto:Subb-11
+if "%pr-ver%"=="n" goto:THX
+
+:Subb-11
+(
+echo mcb164.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Beta-12
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mcb165.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Beta-12
+if "%pr-ver%"=="s" goto:Subb-12
+if "%pr-ver%"=="n" goto:THX
+
+:Subb-12
+(
+echo mcb165.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Beta-13
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mcb166.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Beta-13
+if "%pr-ver%"=="s" goto:Subb-13
+if "%pr-ver%"=="n" goto:THX
+
+:Subb-13
+(
+echo mcb166.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Beta-14
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mcb1701.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Beta-14
+if "%pr-ver%"=="s" goto:Subb-14
+if "%pr-ver%"=="n" goto:THX
+
+:Subb-14
+(
+echo mcb1701.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Beta-15
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mcb172.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Beta-15
+if "%pr-ver%"=="s" goto:Subb-15
+if "%pr-ver%"=="n" goto:THX
+
+:Subb-15
+(
+echo mcb172.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Beta-16
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mcb173.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Beta-16
+if "%pr-ver%"=="s" goto:Subb-16
+if "%pr-ver%"=="n" goto:THX
+
+:Subb-16
+(
+echo mcb173.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Beta-17
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mcb18pre.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Beta-17
+if "%pr-ver%"=="s" goto:Subb-17
+if "%pr-ver%"=="n" goto:THX
+
+:Subb-17
+(
+echo mcb18pre.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Beta-18
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mcb18pre2.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Beta-18
+if "%pr-ver%"=="s" goto:Subb-18
+if "%pr-ver%"=="n" goto:THX
+
+:Subb-18
+(
+echo mcb18pre2.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Beta-19
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mcb181.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Beta-19
+if "%pr-ver%"=="s" goto:Subb-19
+if "%pr-ver%"=="n" goto:THX
+
+:Subb-19
+(
+echo mcb181.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Beta-20
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mcb19pre.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Beta-20
+if "%pr-ver%"=="s" goto:Subb-20
+if "%pr-ver%"=="n" goto:THX
+
+:Subb-20
+(
+echo mcb19pre.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Beta-21
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mcb19pre2.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Beta-21
+if "%pr-ver%"=="s" goto:Subb-21
+if "%pr-ver%"=="n" goto:THX
+
+:Subb-21
+(
+echo mcb19pre2.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Beta-22
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mcb19pre3.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Beta-22
+if "%pr-ver%"=="s" goto:Subb-22
+if "%pr-ver%"=="n" goto:THX
+
+:Subb-22
+(
+echo mcb19pre3.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Beta-23
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mcb19pre4.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Beta-23
+if "%pr-ver%"=="s" goto:Subb-23
+if "%pr-ver%"=="n" goto:THX
+
+:Subb-23
+(
+echo mcb19pre4.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Beta-24
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mcb19pre5.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Beta-24
+if "%pr-ver%"=="s" goto:Subb-24
+if "%pr-ver%"=="n" goto:THX
+
+:Subb-24
+(
+echo mcb19pre5.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Beta-25
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mcb19pre6.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Beta-25
+if "%pr-ver%"=="s" goto:Subb-25
+if "%pr-ver%"=="n" goto:THX
+
+:Subb-25
+(
+echo mcb19pre6.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Beta-26
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mcb13.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Beta-26
+if "%pr-ver%"=="s" goto:Subb-26
+if "%pr-ver%"=="n" goto:THX
+
+:Subb-26
+(
+echo mcb13.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:VER6
+cd %FilePath%
+start updq.bat
+cls
+echo [0 - Minecraft RC2]
+echo [1 - Minecraft 1.0.0]
+echo [2 - Minecraft 11w47a]
+echo [3 - Minecraft 11w48a]
+echo [4 - Minecraft 11w49a]
+echo [5 - Minecraft 11w50a]
+echo [6 - Minecraft 1.1]
+echo [7 - Minecraft 12w03a]
+echo [8 - Minecraft 12w04a]
+echo [9 - Minecraft 12w05a]
+echo [10 - Minecraft 12w05b]
+echo [11 - Minecraft 12w06a]
+echo [12 - Minecraft 12w07a]
+echo [13 - Minecraft 12w07b]
+echo [14 - Minecraft 12w08a]
+echo [15 - Minecraft 1.2.0 Preview]
+echo [16 - Minecraft 1.2.1]
+echo [17 - Minecraft 1.2.2]
+echo [18 - Minecraft 1.2.3]
+echo [19 - Minecraft 1.2.4]
+echo [20 - Minecraft 1.2.5]
+echo [21 - Minecraft 12w15a]
+echo [22 - Minecraft 12w16a]
+echo [23 - Minecraft 12w17a]
+echo [24 - Minecraft 12w21a]
+echo [25 - Minecraft 12w21b]
+echo.
+set /p "ofc=>> "
+if not defined ofc goto:VER6
+if "%ofc%"=="0" goto:Ofc-1
+if "%ofc%"=="1" goto:Ofc-2
+if "%ofc%"=="2" goto:Ofc-3
+if "%ofc%"=="3" goto:Ofc-4
+if "%ofc%"=="4" goto:Ofc-5
+if "%ofc%"=="6" goto:Ofc-6
+if "%ofc%"=="7" goto:Ofc-7
+if "%ofc%"=="8" goto:Ofc-8
+if "%ofc%"=="9" goto:Ofc-9
+if "%ofc%"=="10" goto:Ofc-10
+if "%ofc%"=="11" goto:Ofc-11
+if "%ofc%"=="12" goto:Ofc-12
+if "%ofc%"=="13" goto:Ofc-13
+if "%ofc%"=="14" goto:Ofc-14
+if "%ofc%"=="15" goto:Ofc-15
+if "%ofc%"=="16" goto:Ofc-16
+if "%ofc%"=="17" goto:Ofc-17
+if "%ofc%"=="18" goto:Ofc-18
+if "%ofc%"=="19" goto:Ofc-19
+if "%ofc%"=="20" goto:Ofc-20
+if "%ofc%"=="21" goto:Ofc-21
+if "%ofc%"=="22" goto:Ofc-22
+if "%ofc%"=="23" goto:Ofc-23
+if "%ofc%"=="24" goto:Ofc-24
+if "%ofc%"=="25" goto:Ofc-25
+if "%ofc%"=="26" goto:Ofc-6
+pause
+goto:VER0
+
+:Ofc-1
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mcrc2.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Ofc-1
+if "%pr-ver%"=="s" goto:Sub-1
+if "%pr-ver%"=="n" goto:THX
+
+:Sub-1
+(
+echo mcrc2.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Ofc-2
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mc100.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Ofc-2
+if "%pr-ver%"=="s" goto:Sub-2
+if "%pr-ver%"=="n" goto:THX
+
+:Sub-2
+(
+echo mc100.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Ofc-3
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mc11w47a.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Ofc-3
+if "%pr-ver%"=="s" goto:Sub-3
+if "%pr-ver%"=="n" goto:THX
+
+:Sub-3
+(
+echo mc12w47a.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Ofc-4
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mc11w48a.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Ofc-4
+if "%pr-ver%"=="s" goto:Sub-4
+if "%pr-ver%"=="n" goto:THX
+
+:Sub-4
+(
+echo mc12w48a.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Ofc-5
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mc11w49a.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Ofc-5
+if "%pr-ver%"=="s" goto:Sub-5
+if "%pr-ver%"=="n" goto:THX
+
+:Sub-5
+(
+echo mc11w49a.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Ofc-6
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mc11.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Ofc-6
+if "%pr-ver%"=="s" goto:Sub-6
+if "%pr-ver%"=="n" goto:THX
+
+:Sub-6
+(
+echo mc11.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Ofc-7
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mc12w03a.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Ofc-7
+if "%pr-ver%"=="s" goto:Sub-7
+if "%pr-ver%"=="n" goto:THX
+
+:Sub-7
+(
+echo mc12w03a.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Ofc-8
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mc12w04a.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Ofc-8
+if "%pr-ver%"=="s" goto:Sub-8
+if "%pr-ver%"=="n" goto:THX
+
+:Sub-8
+(
+echo mc12w04a.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Ofc-9
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mc12w05a.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Ofc-9
+if "%pr-ver%"=="s" goto:Sub-9
+if "%pr-ver%"=="n" goto:THX
+
+:Sub-9
+(
+echo mc12w05a.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Ofc-10
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mc12w05b.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Ofc-10
+if "%pr-ver%"=="s" goto:Sub-10
+if "%pr-ver%"=="n" goto:THX
+
+:Sub-10
+(
+echo mc12w05b.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Ofc-11
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mc12w06a.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Ofc-11
+if "%pr-ver%"=="s" goto:Sub-11
+if "%pr-ver%"=="n" goto:THX
+
+:Sub-11
+(
+echo mc12w06a.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Ofc-12
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mc12w07a.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Ofc-12
+if "%pr-ver%"=="s" goto:Sub-12
+if "%pr-ver%"=="n" goto:THX
+
+:Sub-12
+(
+echo mc12w07a.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Ofc-13
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mc12w07b.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Ofc-13
+if "%pr-ver%"=="s" goto:Sub-13
+if "%pr-ver%"=="n" goto:THX
+
+:Sub-13
+(
+echo mc12w07b.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Ofc-14
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mc12w08a.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Ofc-14
+if "%pr-ver%"=="s" goto:Sub-14
+if "%pr-ver%"=="n" goto:THX
+
+:Sub-14
+(
+echo mc12w08a.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Ofc-15
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mc120prev.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Ofc-15
+if "%pr-ver%"=="s" goto:Sub-15
+if "%pr-ver%"=="n" goto:THX
+
+:Sub-15
+(
+echo mc120prev.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Ofc-16
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mc121.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Ofc-16
+if "%pr-ver%"=="s" goto:Sub-16
+if "%pr-ver%"=="n" goto:THX
+
+:Sub-16
+(
+echo mc121.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Ofc-17
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mc122.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Ofc-17
+if "%pr-ver%"=="s" goto:Sub-17
+if "%pr-ver%"=="n" goto:THX
+
+:Sub-17
+(
+echo mc122.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Ofc-18
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mc123.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Ofc-18
+if "%pr-ver%"=="s" goto:Sub-18
+if "%pr-ver%"=="n" goto:THX
+
+:Sub-18
+(
+echo mc123.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Ofc-19
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mc124.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Ofc-19
+if "%pr-ver%"=="s" goto:Sub-19
+if "%pr-ver%"=="n" goto:THX
+
+:Sub-19
+(
+echo mc124.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Ofc-20
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mc125.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Ofc-20
+if "%pr-ver%"=="s" goto:Sub-20
+if "%pr-ver%"=="n" goto:THX
+
+:Sub-20
+(
+echo mc125.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Ofc-21
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mc12w15a.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Ofc-21
+if "%pr-ver%"=="s" goto:Sub-21
+if "%pr-ver%"=="n" goto:THX
+
+:Sub-21
+(
+echo mc12w15a.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Ofc-22
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mc12w16a.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Ofc-22
+if "%pr-ver%"=="s" goto:Sub-22
+if "%pr-ver%"=="n" goto:THX
+
+:Sub-22
+(
+echo mc12w16a.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Ofc-23
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mc12w17a.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Ofc-23
+if "%pr-ver%"=="s" goto:Sub-23
+if "%pr-ver%"=="n" goto:THX
+
+:Sub-23
+(
+echo mc12w17a.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Ofc-24
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mc12w21a.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Ofc-24
+if "%pr-ver%"=="s" goto:Sub-24
+if "%pr-ver%"=="n" goto:THX
+
+:Sub-24
+(
+echo mc12w21a.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Ofc-25
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mc12w21b.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Ofc-25
+if "%pr-ver%"=="s" goto:Sub-25
+if "%pr-ver%"=="n" goto:THX
+
+:Sub-25
+(
+echo mc12w21b.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:Ofc-26
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\mc11w50a.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Ofc-26
+if "%pr-ver%"=="s" goto:Sub-26
+if "%pr-ver%"=="n" goto:THX
+
+:Sub-26
+(
+echo mc11w50a.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:VER7
+cls
+echo Que version desea ponerse:
+echo.
+echo [0 - PCGamerVersion]
+echo %txt11%
+echo.
+set /p "oth=>> "
+if not defined oth goto:VER7
+if "%oth%"=="0" goto:Oth-1
+
+:Oth-1
+Set "Url=http://cheat.retrogames.com/"
+Set "TempFile=%APPDATA%\.techniclauncher-crack\gamemodes\MCPortable\Roaming\.minecraft\bin\PCGamerV.jar"
+Set "FilePath=%APPDATA%\.techniclauncher-crack\launcher"
+bin\\wget --no-check-certificate -O "%TempFile%" %URL%
+cls
+echo Deseas establecer esta version como predeterminada (S/N):
+echo.
+set /p "pr-ver=>> "
+if not defined pr-ver goto:Oth-1
+if "%pr-ver%"=="s" goto:Subo-1
+if "%pr-ver%"=="n" goto:THX
+
+:Subo-1
+(
+echo PCGamerV.jar
+) > "%FilePath%\set-launcher.txt" goto:MCPORTABLE
+
+:THX
+cls
+echo Gracias por usar el MC Updater.
+pause
+goto:MD
